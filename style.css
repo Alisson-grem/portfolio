@@ -1,0 +1,91 @@
+/* style.css */
+
+body {
+    font-family: 'segoe ui', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #3CB371;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+section {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    color: #3CB371;
+    margin-bottom: 1rem;
+}
+
+.projeto {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid #3cB371;
+}
+
+a {
+    color: #0784d0;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Responsividade */
+.projeto-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap; /* quebra para proxima linha em telas menores */
+    justify-content: space-between; /* espaçamento horizontal */
+}
+
+.projeto {
+    flex: 1 1 280px; /* cresce e diminui conforme o espaço */
+    background: white;
+    padding: 1rem;
+    border-left: 5px solid #3CB371;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 768px) {
+    header, section, footer {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .projeto-container {
+        flex-direction: column; /* coluna em telas pequenas */
+        gap: 1rem; 
+    }
+
+    .projeto {
+        flex: 1 1 100%; /* ocupa toda a largura */
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
