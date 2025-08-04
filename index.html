@@ -28,7 +28,7 @@
      <div class="projeto-container">
         <div class="projeto">
             <h3>Landing Page</h3>
-            <p>Página de vendas responsiva feita com HTML e CSS puro.</p>
+            <p>Página para fotógrafo(fictício) responsiva feita com HTML e CSS puro.</p>
             </div>
 
             <div class="projeto">
@@ -44,9 +44,17 @@
 
     <!-- Seção Contato -->
      <section id="contato">
-        <h2>Contato</h2>
-        <p>Você pode falar comigo pelo email: 
-          <a href="mailto:alisson.agp.rj@gmail.com">alisson.agp.rj@gmail.com</a></p>
+        <h2>Contato</h2> 
+          <form action="https://formsubmit.co/alisson.agp.rj@gmail.com" method="POST">
+            <input type="text" name="nome" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu Email" required>
+            <textarea name="mensagem" placeholder="Digite sua Mensagem" required></textarea>
+            <button type="submit">Enviar Mensagem</button>
+
+            <!-- segurança -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://alissonportfolio.netlify.app/obrigado.html">
+          </form>
     </section>
 
     <!-- Rodapé -->
