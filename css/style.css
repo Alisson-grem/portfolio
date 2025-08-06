@@ -209,8 +209,9 @@ section.visible {
 
 .fill {
     height: 100%;
+    width: 0; /* Inicialmente 0, será animado */
     background-color: #3CB371;
-    transition: width 1s ease-in-out;
+    transition: width 1.5s ease-in-out;
 }
 
 #jornada {
@@ -238,4 +239,18 @@ section.visible {
     height: 16px;
     background-color: #3CB371;
     border-radius: 50%;
+}
+
+#blog {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.post {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid #3CB371;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }

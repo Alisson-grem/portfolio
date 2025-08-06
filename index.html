@@ -15,16 +15,16 @@
   <div class="menu-hamburguer" id="menu-hamburguer">&#9776;</div>
   <ul class="menu-links" id="menu-links">
     <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#projetos">Projetos</a></li>
-    <li><a href="#contato">Contato</a></li>
-    <li><a href="#habilidades">Habilidades</a></li>
     <li><a href="#jornada">Jornada</a></li>
+    <li><a href="#habilidades">Habilidades</a></li>
+    <li><a href="#projetos">Projetos</a></li>
     <li><a href="#blog">Blog</a></li>
+    <li><a href="#contato">Contato</a></li>
   </ul>
 </nav>
     <!-- Cabeçalho com nome e titulo -->
      <header>
-        <h1>Alisson Gomes Pedrosa</h1>
+        <h1 id="texto-digitado"></h1>
         <p>Desenvolvedor Front-End em formação</p>
     </header>
 
@@ -51,7 +51,7 @@
             <h3>Meados de 2025</h3>
             <p>Criei meu portfólio, publiquei o mesmo online 
               e estou aprimorando minhas habilidades em 
-              HMTL, CSS e agora JavaScript.</p>
+              HTML, CSS e agora JavaScript.</p>
           </div>
         </div>
       </section>
@@ -62,17 +62,17 @@
 
         <div class="skill">
           <p>HTML</p>
-          <div class="bar"><div class="fill" style="width:90%"></div></div>
+          <div class="bar"><div class="fill" data-percent="90"></div></div>
         </div>
 
         <div class="skill">
           <p>CSS</p>
-          <div class="bar"><div class="fill" style="width:80%"></div></div>
+          <div class="bar"><div class="fill" data-percent="80"></div></div>
         </div>
 
         <div class="skill">
           <p>JavaScript</p>
-          <div class="bar"><div class="fill" style="width:60%"></div></div>
+          <div class="bar"><div class="fill" data-percent="60"></div></div>
         </div>
      </section>
 
@@ -94,6 +94,23 @@
          </div>
 
 
+        </section>
+
+        <section id="blog">
+          <h2>Artigos Recentes</h2>
+
+          <article class="post">
+            <h3>Como comecei no Front-End</h3>
+            <p>Compartilho minha experiência de aprendizado, meus primeiros erros e acertos, 
+              na criação deste portfólio e outras páginas simples que fiz.</p>
+          </article>
+
+          <article class="post">
+            <h3>Melhores Práticas para o HTML e CSS</h3>
+            <p>Essas foram algumas das práticas 
+              que aprendi e apliquei no meu dia a dia, 
+              criando meu portfólio e alguns outros sites.</p>
+              </article>
         </section>
 
     <!-- Seção Contato -->
@@ -118,5 +135,6 @@
 <script src="js/ano.js"></script>
 <script src="js/scroll.js"></script>
 <script src="js/menu.js"></script>
+<script src="js/digitando.js"></script>
 </body>
 </html>

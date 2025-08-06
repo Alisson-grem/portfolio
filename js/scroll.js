@@ -18,3 +18,18 @@
       }
     });
   });
+
+  const observerHabilides = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.fill').forEach(barra => {
+          const valor = barra.getAttribute('data-percent');
+          barra.style.width = valor + '%';
+        });
+        observerHabilides.unobserve(entry.target);
+      }
+    });
+    }, { threshold: 0.5 });
+
+    const secHabilidades = document.querySelector('#habilidades');
+    if (secHabilidades) observerHabilides.observe(secHabilidades);
