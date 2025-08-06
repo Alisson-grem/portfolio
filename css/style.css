@@ -113,3 +113,78 @@ button {
     font-size: 1rem;
     cursor: pointer;
 }
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu-logo a {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.menu-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.menu-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu-links a:hover {
+  color: #007BFF;
+}
+
+.menu-hamburguer {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-links {
+    position: absolute;
+    top: 60px;
+    right: -200px;
+    flex-direction: column;
+    background-color: white;
+    width: 180px;
+    padding: 1rem;
+    transition: right 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+
+  .menu-links.active {
+    right: 0;
+  }
+
+  .menu-hamburguer {
+    display: block;
+  }
+}
+
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

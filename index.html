@@ -5,9 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio de Alisson</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+  <nav class="menu">
+  <div class="menu-logo">
+    <a href="#topo">Alisson</a>
+  </div>
+  <div class="menu-hamburguer" id="menu-hamburguer">&#9776;</div>
+  <ul class="menu-links" id="menu-links">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#projetos">Projetos</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+</nav>
     <!-- Cabeçalho com nome e titulo -->
      <header>
         <h1>Alisson Gomes Pedrosa</h1>
@@ -61,6 +72,37 @@
      <footer>
         <p>&copy; 2025 Alisson Gomes Pedrosa. Todos os direitos reservados.</p>
         </footer>
+
+        <script>
+  // Menu responsivo
+  const hamburguer = document.getElementById('menu-hamburguer');
+  const menuLinks = document.getElementById('menu-links');
+
+  hamburguer.addEventListener('click', () => {
+    menuLinks.classList.toggle('active');
+  });
+
+  // Scroll suave
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const alvo = document.querySelector(this.getAttribute('href'));
+      alvo.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // Animação de entrada ao rolar
+  const sections = document.querySelectorAll('section');
+  window.addEventListener('scroll', () => {
+    const trigger = window.innerHeight * 0.85;
+    sections.forEach(sec => {
+      const top = sec.getBoundingClientRect().top;
+      if (top < trigger) {
+        sec.classList.add('visible');
+      }
+    });
+  });
+</script>
             
 </body>
 </html>
