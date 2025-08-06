@@ -70,7 +70,7 @@
 
     <!-- Rodapé -->
      <footer>
-        <p>&copy; 2025 Alisson Gomes Pedrosa. Todos os direitos reservados.</p>
+        <p>&copy; <span id="ano"></span> Alisson Gomes Pedrosa. Todos os direitos reservados.</p>
         </footer>
 
         <script>
@@ -101,6 +101,40 @@
         sec.classList.add('visible');
       }
     });
+  });
+</script>
+
+<script>
+
+   document.getElementById('ano').textContent = new Date().getFullyear();
+
+</script>
+
+<script>
+  const form = document.querySelector('form[action*="formsubmit.co"]');
+  form.addEventListener('submit', function(e) {
+    const nome = this.querySelector('input[name="nome"]').value.trim();
+    const email = this.querySelector('input[name="email"]').value.trim();
+    if (!nome || !email) {
+      e.preventDefault();
+      alert('Por favor, preencha seu nome e e-mail antes de enviar.');
+    }
+  });
+</script>
+
+<script>
+  //Animaçõesao aparecerna tela
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('section').forEach(sec => {
+    observer.observe(sec);
   });
 </script>
             
