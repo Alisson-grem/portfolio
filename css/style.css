@@ -254,3 +254,9 @@ section.visible {
     border-left: 5px solid #3CB371;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
